@@ -18,9 +18,11 @@ func p3_1(data string) int {
 	}
 	gamma := 0
 	epsilon := 0
-	for c := range len(counter) {
-		inc := int(math.Pow(2, float64(len(counter)-c-1)))
-		if counter[c] > len(lines)/2 {
+	n_digits := len(counter)
+	threshold := len(lines)/2
+	for c := range n_digits {
+		inc := int(math.Pow(2, float64(n_digits-c-1)))
+		if counter[c] > threshold{
 			gamma = gamma + inc
 		} else {
 			epsilon = epsilon + inc
