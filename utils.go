@@ -5,7 +5,14 @@ import (
 	"strings"
 )
 
+func check(err error) {
+	if err != nil {
+		panic("Error")
+	}
+}
+
 func ToInt(s string) int {
-	i, _ := strconv.Atoi(strings.TrimSpace(s))
+	i, err := strconv.Atoi(strings.TrimSpace(s))
+	check(err)
 	return i
 }

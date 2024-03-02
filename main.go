@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	data, _ := os.ReadFile("p1.txt")
+	data, _ := os.ReadFile("p2.txt")
 	input := string(data)
-	fmt.Println(p1_1(input))
-	fmt.Println(p1_2(input))
+	fmt.Println(p2_1(input))
+	fmt.Println(p2_2(input))
 }
